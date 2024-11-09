@@ -1,0 +1,24 @@
+<%= form_with model: @mentor do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @mentor.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+<div>
+    <%= form.label :email %><br/>
+    <%= form.text_field :email %> <% @mentor.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :skills %><br>
+    <%= form.text_area :skills %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get "/mentors", to: "mentors#index"
+
+  resources :mentors
+
 
   root "mentors#index"
 end

@@ -3,9 +3,9 @@
 <ul>
   <% @mentors.each do |mentor| %>
     <li>
-      <%= mentor.name %><br/>
-      <%= mentor.email %><br/>
-      <%= mentor.skills %>
+     <%= link_to mentor.name, mentor %>
+
     </li>
   <% end %>
 </ul>
+<%= link_to "Nova mentora", new_mentor_path %>
