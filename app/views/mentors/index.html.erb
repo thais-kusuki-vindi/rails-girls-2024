@@ -1,2 +1,11 @@
-<h1>Mentors#index</h1>
-<p>Find me in app/views/mentors/index.html.erb</p>banana
+<h1>Mentoras</h1>
+
+<ul>
+  <% @mentors.each do |mentor| %>
+    <li>
+      <%= mentor.name %><br/>
+      <%= mentor.email %><br/>
+      <%= mentor.skills %>
+    </li>
+  <% end %>
+</ul>
